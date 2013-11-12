@@ -137,6 +137,18 @@ function saltSHA1SecretCheck($string){
     return false;
 }
 
+function saltSHA1GetValue($string) {
+    $hash = explode('|', $string);
+    if (count($hash) == 2){
+        return $hash[0];
+    }
+    return null;
+}
+
+function saltSHA1SecretGetValue($string) {
+    return saltSHA1GetValue($string);
+}
+
 function staticUrl($chunk){
     return URL_STATIC.$chunk;
 }

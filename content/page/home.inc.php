@@ -1,8 +1,8 @@
 <?php
 /**
  * Developer: Rahul Kadyan
- * Date: 27/09/13
- * Time: 2:15 PM
+ * Date: 08/11/13
+ * Time: 3:48 AM
  * Product: JetBrains PhpStorm
  * Copyright (C) 2013 Rahul Kadyan
  *  
@@ -21,17 +21,3 @@
  * CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER 
  * DEALINGS IN THE SOFTWARE.
  */
-function urlBinding($segments){
-    $binds = array(
-        '/^\/(index|index\.php|index\.html|index\.htm)?$/' => array('page', 'home')
-    );
-    foreach($binds as $key => $val){
-        if(preg_match($key, $segments, $matches)){
-            set(BINDING_MATCHES, $matches);
-            set(ROUTER_FOLDER, $binds[$key][0]);
-            set(ROUTER_PAGE, $binds[$key][1]);
-            return true;
-        }
-    }
-    return false;
-}

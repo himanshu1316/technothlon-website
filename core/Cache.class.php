@@ -1,6 +1,17 @@
 <?php
 if(!defined('xDEC')) exit;
-//TODO In next version
 class Cache {
+    function inCache($url) {
+        return false;
+    }
+    function get($url) {
+        return '';
+    }
+    function _echo() {
+
+    }
+}
+
+class FileCache {
 
 }

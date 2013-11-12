@@ -5,7 +5,7 @@ abstract class Pages implements Page
     function __head__($var)
     {
         // TODO: include js libraries and extensions
-        ?><!DOCTYPE HTML><html lang="en"><head><?php
+        ?><!DOCTYPE HTML><html lang="en"><head><meta http-equiv="content-type" content="text/html; charset=UTF-8"><?php
     }
 
     function __title__($var)

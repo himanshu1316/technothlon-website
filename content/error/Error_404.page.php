@@ -7,9 +7,14 @@ class Error_404 extends Pages
     {
         parent::__head__($var);
         parent::__title__(' | Page not found');
-        require_once(CONTENT.'home/head.php');
+        ?>
+        <style type="text/css">
+            body{
+                background: url(/content/images/texture2.png);
+            }
+        </style>
+        <?php
         parent::__body__($var);
-        require_once(CONTENT.'home/header.php');
         ?>
         <div class="center-text container">
             <h3><span class="dark">404.</span> That's an error.</h3>

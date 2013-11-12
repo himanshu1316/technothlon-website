@@ -13,7 +13,7 @@ class Router
     {
         $requestUri = $_SERVER['REQUEST_URI'];
         $requestUri = explode('?', $requestUri);
-        $requestStr =  substr($requestUri[0], strlen(DIR));
+        $requestStr = substr($requestUri[0], strlen(DIR));
         $segments = explode('/', trim(substr($requestUri[0], strlen(DIR)), '/'));
         if (0 == count($segments)) {
             array_push($segments, 'home');
@@ -29,12 +29,9 @@ class Router
             set(ROUTER_FOLDER, $segments[0]);
             set(ROUTER_PAGE, $segments[1]);
         } else if (is_file(CONTENT . 'bind.php')) {
-            /** @noinspection PhpIncludeInspection */
-            require_once(CONTENT.'bind.php');
-            if (function_exists('urlBinding') && call_user_func('urlBinding', $requestStr)){
-
-            }
-            else {
+            require_once(CONTENT . 'bind.php');
+            if (function_exists('urlBinding') && call_user_func('urlBinding', $requestStr)) {
+            } else {
                 set(ROUTER_FOLDER, 'error');
                 set(ROUTER_PAGE, 'Error_404');
             }
@@ -43,7 +40,7 @@ class Router
             set(ROUTER_PAGE, 'Error_404');
         }
         set(ROUTER_ARGS, $segments);
-        set('REQUEST_URI', DOMAIN.$_SERVER['REQUEST_URI']);
+        set('REQUEST_URI', DOMAIN . $_SERVER['REQUEST_URI']);
         /** @noinspection PhpIncludeInspection */
         require_once(CONTENT . get(ROUTER_FOLDER) . '/' . get(ROUTER_PAGE) . '.page.php');
     }
@@ -52,9 +49,15 @@ class Router
 
     public function navigate()
     {
-        $page = get(PAGE_OBJECT);
-        if($page instanceof Page){
-            $page->startOutput(get(ROUTER_ARGS));
+        $cache = get('Cache');
+        $uri = get('REQUEST_URI');
+        if ($cache instanceof Cache && $cache->inCache($uri)) {
+            $cache->_echo($uri);
+        } else {
+            $page = get(PAGE_OBJECT);
+            if ($page instanceof Pages) {
+                $page->startOutput(get(ROUTER_ARGS));
+            }
         }
     }
 
