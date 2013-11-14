@@ -57,10 +57,12 @@ function error_handler($errno, $errstr, $errfile, $errline){
         case E_COMPILE_ERROR:
         case E_CORE_ERROR:
         case E_RECOVERABLE_ERROR:
-            get(LOGGER)->error("#$errno $errstr in `$errfile` at line no $errline");
+            $logger = get('Logger');
+            if($logger instanceof Logger) $logger->error("#$errno $errstr in `$errfile` at line no $errline");
             break;
         default:
-            get(LOGGER)->log("#$errno $errstr in `$errfile` at line no $errline");
+            $logger = get('Logger');
+            if($logger instanceof Logger) $logger->log("#$errno $errstr in `$errfile` at line no $errline");
             break;
     }
 

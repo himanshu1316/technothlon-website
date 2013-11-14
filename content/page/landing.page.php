@@ -1,44 +1,35 @@
 <?php
 /**
  * Developer: Rahul Kadyan
- * Date: 08/11/13
- * Time: 1:57 AM
- * Product: JetBrains PhpStorm
+ * Date: 15/11/13
+ * Time: 12:52 AM
+ * Product: PhpStorm
  * Copyright (C) 2013 Rahul Kadyan
- *  
+ *
  * Permission is hereby granted, free of charge, to any person obtaining a copy of this software
- * and associated documentation files (the "Software"), to deal in the Software without restriction, 
- * including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, 
- * and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, 
+ * and associated documentation files (the "Software"), to deal in the Software without restriction,
+ * including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense,
+ * and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so,
  * subject to the following conditions:
- * 
+ *
  * The above copyright notice and this permission notice shall be included in all copies or substantial
  * portions of the Software.
- * 
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED
  * TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL
  * THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF
- * CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER 
+ * CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
  * DEALINGS IN THE SOFTWARE.
  */
-
-class home extends Pages {
+if(!defined('xDEC')) exit;
+class landing extends Pages
+{
     function __head__($var)
     {
-        ?>
-        <style type="text/css">
-            html, body{
-                width: 100%;
-                min-height: 100%;
-            }
-            body{
-                background: url(/content/images/texture2.png);
-            }
-            img{
-                max-width: 100%;
-            }
-        </style>
-    <?php
+        parent::__head__($var);
+        require_once('landing.css.php');
+        require_once('navigation.snippet.css.php');
+        require_once('landing.js.php');
     }
 
     function __title__($var)
@@ -49,14 +40,13 @@ class home extends Pages {
     function __body__($var)
     {
         parent::__body__($var);
-        if(file_exists(dir(__FILE__)).'/home.inc.php') require_once('home.inc.php');
+        if (file_exists(dir(__FILE__)) . '/landing.inc.php') require_once('landing.inc.php');
     }
 
     function end_body()
     {
         parent::end_body();
     }
-
 
     function startOutput($var)
     {
@@ -67,4 +57,4 @@ class home extends Pages {
     }
 }
 
-set(PAGE_OBJECT, new home());
+set(PAGE_OBJECT, new landing());

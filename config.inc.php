@@ -46,8 +46,13 @@ define('MODAL', BASE . 'modal/');
  * @since version 1.0
  *
  */
-define('DIR', '/mark-1');
-
+define('DIR', '');
+/**
+ * Path to cache directory of `the application` with respect to the hosted root directory
+ * @name CACHE
+ * @since version 1.0
+ */
+define('CACHE', BASE . 'cache/');
 /**
  * MySQL Database server host
  * @name DB_HOST

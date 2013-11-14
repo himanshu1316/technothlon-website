@@ -1,9 +1,9 @@
 <?php
 /**
  * Developer: Rahul Kadyan
- * Date: 08/11/13
- * Time: 1:57 AM
- * Product: JetBrains PhpStorm
+ * Date: 13/11/13
+ * Time: 10:43 PM
+ * Product: PhpStorm
  * Copyright (C) 2013 Rahul Kadyan
  *  
  * Permission is hereby granted, free of charge, to any person obtaining a copy of this software
@@ -21,50 +21,16 @@
  * CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER 
  * DEALINGS IN THE SOFTWARE.
  */
-
-class home extends Pages {
-    function __head__($var)
-    {
-        ?>
-        <style type="text/css">
-            html, body{
-                width: 100%;
-                min-height: 100%;
-            }
-            body{
-                background: url(/content/images/texture2.png);
-            }
-            img{
-                max-width: 100%;
-            }
-        </style>
-    <?php
-    }
-
-    function __title__($var)
-    {
-        parent::__title__(' | Home');
-    }
-
-    function __body__($var)
-    {
-        parent::__body__($var);
-        if(file_exists(dir(__FILE__)).'/home.inc.php') require_once('home.inc.php');
-    }
-
-    function end_body()
-    {
-        parent::end_body();
-    }
-
-
-    function startOutput($var)
-    {
-        $this->__head__('');
-        $this->__title__('');
-        $this->__body__('');
-        $this->end_body();
-    }
-}
-
-set(PAGE_OBJECT, new home());
+if(!defined('xDEC')) exit; ?>
+<div id="view-port" class="container page">
+    <div id="landing" class="container">
+        <div id="logo-animation-container" class="entity-group">
+            <div id="logo-head" class="entity sprite-logos logo_partial_head"></div>
+            <div id="logo-text" class="entity sprite-logos logo_partial_text"></div>
+            <div id="logo-tag" class="entity sprite-logos logo_partial_tag"></div>
+        </div>
+    </div>
+</div>
+<div id="pageContent" class="hidden">
+ <?php require_once('navigation.snippet.php'); ?>
+</div>
