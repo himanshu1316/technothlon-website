@@ -26,6 +26,10 @@
 
     }
     .node{
-        display: inline;
+        display: inline-block;
+        margin: 8px;
+    }
+    #main-navigation{
+        text-align: center;
     }
 </style>

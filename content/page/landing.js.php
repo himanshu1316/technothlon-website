@@ -43,6 +43,6 @@ if(!defined('xDEC')) exit;
         }, 4000);
     });
     function pageLoad(){
-        $('#view-port').html($('#pageContent').html());
+        $('#view-port').hide().html($('#pageContent').html()).fadeIn();
     }
 </script>
