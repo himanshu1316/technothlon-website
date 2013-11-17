@@ -22,17 +22,18 @@
  * DEALINGS IN THE SOFTWARE.
  */
 if(!defined('xDEC')) exit;
-class landing extends Pages
+class about extends Pages
 {
     function __head__($var)
     {
         parent::__head__($var);
         require_once('text.snippet.css.php');
         require_once('landing.css.php');
-        require_once('banner.css.php');
+        //require_once('banner.css.php');
         require_once('navigation.snippet.css.php');
-        require_once('animation.snippet.css.php');
-        require_once('landing.js.php');
+        require_once('about.css.php');
+//        require_once('animation.snippet.css.php');
+//        require_once('landing.js.php');
     }
 
     function __title__($var)
@@ -43,7 +44,8 @@ class landing extends Pages
     function __body__($var)
     {
         parent::__body__($var);
-        require_once('landing.inc.php');
+        //if (file_exists(dir(__FILE__)) . '/about.inc.php')
+        require_once('about.inc.php');
     }
 
     function end_body()
@@ -60,4 +62,4 @@ class landing extends Pages
     }
 }
 
-set(PAGE_OBJECT, new landing());
+set(PAGE_OBJECT, new about());
