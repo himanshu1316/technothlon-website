@@ -23,7 +23,8 @@
  */
 if (!defined('xDEC')) exit; ?>
 <div id="banner-container" class="animation-container container banner back-white parallax-2" style="background-image: url(./content/images/sachin.jpg)">
+    <h1 class="extra-large" style="text-align: center">Hello' World</h1>
 </div>
 <script>
-    $(document).ready(function(){$('#banner-container').css('height', (screen.availHeight)+'px').parallax({ coeff: 0.7});})
+    $(document).ready(function(){$('#banner-container').css('height', (screen.availHeight)+'px').parallax({ coeff: 0.7});});
 </script>

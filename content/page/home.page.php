@@ -23,22 +23,13 @@
  */
 
 class home extends Pages {
+
     function __head__($var)
     {
-        ?>
-        <style type="text/css">
-            html, body{
-                width: 100%;
-                min-height: 100%;
-            }
-            body{
-                background: url(/content/images/texture2.png);
-            }
-            img{
-                max-width: 100%;
-            }
-        </style>
-    <?php
+        parent::__head__($var);
+        require_once('text.snippet.css.php');
+        require_once('banner.css.php');
+        require_once('navigation.snippet.css.php');
     }
 
     function __title__($var)
@@ -49,14 +40,13 @@ class home extends Pages {
     function __body__($var)
     {
         parent::__body__($var);
-        if(file_exists(dir(__FILE__)).'/home.inc.php') require_once('home.inc.php');
+        require_once('home.inc.php');
     }
 
     function end_body()
     {
         parent::end_body();
     }
-
 
     function startOutput($var)
     {

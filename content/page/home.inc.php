@@ -20,4 +20,11 @@
  * THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF
  * CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER 
  * DEALINGS IN THE SOFTWARE.
- */
+ */if(!defined('xDEC')) exit; ?>
+<div id="view-port" class="container page match-parent">
+    <?php
+    require_once('navigation.snippet.php');
+    require_once('banner.inc.php');
+    require_once('information.inc.php');
+    ?>
+</div>
