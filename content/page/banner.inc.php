@@ -26,5 +26,10 @@ if (!defined('xDEC')) exit; ?>
     <h1 class="extra-large" style="text-align: center">Hello' World</h1>
 </div>
 <script>
-    $(document).ready(function(){$('#banner-container').css('height', (screen.availHeight)+'px').parallax({ coeff: 0.7});});
+    $(document).ready(function(){$('#banner-container').css('height', (screen.availHeight)+'px').parallax({ coeff: 0.95});
+    $('body').mousewheel(function(event){
+        $(event).preventDefault();
+        $(window).smoothScroll($(window).scrollTop());
+    });
+    });
 </script>

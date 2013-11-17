@@ -23,31 +23,35 @@
  */
 if (!defined('xDEC')) exit; ?>
 <div id="main-navigation" class="animation-container large">
-    <div id="nav-home" class="nav node" style="float: left"><img src="./content/images/technothlon.png"></div>
-    <div id="nav-home" class="nav node">Home</div>
-    <div id="nav-home" class="nav node">Home</div>
-    <div id="nav-home" class="nav node">Home</div>
-    <div id="nav-home" class="nav node">Home</div>
-    <div id="nav-home" class="nav node">Home</div>
+    <div class="nav-wrapper">
+        <div id="nav-home" class="nav node"><a href="./">technothlon</a></div>
+        <div id="nav-home" class="nav node"><a href="./structure">structure</a></div>
+        <div id="nav-home" class="nav node"><a href="#">nav</a></div>
+        <div id="nav-home" class="nav node"><a href="#">nav</a></div>
+        <div id="nav-home" class="nav node"><a href="#">nav</a></div>
+    </div>
 </div>
 <script>
     $(document).ready(function () {
 
-        var dist = ($('.parallax-2').height() - 32) | 0;
-        if (-32 == dist) dist = 128;
+        var dist = ($('.parallax-2').height() - 75) | 0;
+        if (-75 == dist) dist = 53;
         $(window).resize(function (e) {
-            dist = screen.availHeight - 128;
+            dist = ($('.parallax-2').height() - 75) | 0;
+            if (dist < 0) dist = 53;
         });
+        console.log(dist);
         document.addEventListener("touchmove", ScrollNav, false);
         document.addEventListener("scroll", ScrollNav, false);
         function ScrollNav() {
             var st = $(window).scrollTop(),
                 $nav = $('#main-navigation');
             var ds = dist - st;
-            if (ds >= 0 && ds <= 96) {
-                $nav.css('height', (ds + 32) + 'px');
+            console.log(ds);
+            if (ds >= 0 && ds <= 53) {
+                $nav.css('height', (ds + 75) + 'px');
             } else if (ds < 0) {
-                $nav.css('height', '32px');
+                $nav.css('height', '75px');
             } else {
                 $nav.css('height', '128px');
             }

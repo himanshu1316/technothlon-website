@@ -35,7 +35,7 @@ if (!defined('xDEC')) exit;
             200 students confined to the city of Guwahati, over the past 10 years Technothlon has expanded its reach to
             over
             150 cities all over the nation and various centers abroad.
-            
+
             Through a series of events involving mental aptitude, logic, and dexterity, it seeks to provide school
             students a platform to build fundamental experience and knowledge, to exercise co-ordination skills, and to
             think out of the box. As its preliminary round is conducted through several centers in India, it is a
@@ -43,6 +43,37 @@ if (!defined('xDEC')) exit;
         </div>
     </div>
     <div class="article">
-        <h1 class=""
+        <h1 class="extra-large thin">What is Technothlon?</h1>
+        <div class="section two-col t-justify">
+
+            Technothlon is an international school championship organized by the students of Indian Institute of Technology Guwahati. Technothlon
+            began its journey in 2004 with an aim to <i>‘Inspire Young Minds’</i>. Starting on its journey with a participation
+            of
+            200 students confined to the city of Guwahati, over the past 10 years Technothlon has expanded its reach to
+            over
+            150 cities all over the nation and various centers abroad.
+
+            Through a series of events involving mental aptitude, logic, and dexterity, it seeks to provide school
+            students a platform to build fundamental experience and knowledge, to exercise co-ordination skills, and to
+            think out of the box. As its preliminary round is conducted through several centers in India, it is a
+            competitive test of critical thinking. Its final round is conducted in IIT Guwahati during Techniche.
+        </div>
+    </div>
+    <div class="article">
+        <h1 class="extra-large thin">What is Technothlon?</h1>
+        <div class="section two-col t-justify">
+
+            Technothlon is an international school championship organized by the students of Indian Institute of Technology Guwahati. Technothlon
+            began its journey in 2004 with an aim to <i>‘Inspire Young Minds’</i>. Starting on its journey with a participation
+            of
+            200 students confined to the city of Guwahati, over the past 10 years Technothlon has expanded its reach to
+            over
+            150 cities all over the nation and various centers abroad.
+
+            Through a series of events involving mental aptitude, logic, and dexterity, it seeks to provide school
+            students a platform to build fundamental experience and knowledge, to exercise co-ordination skills, and to
+            think out of the box. As its preliminary round is conducted through several centers in India, it is a
+            competitive test of critical thinking. Its final round is conducted in IIT Guwahati during Techniche.
+        </div>
     </div>
 </div>

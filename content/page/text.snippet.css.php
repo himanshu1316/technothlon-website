@@ -29,6 +29,22 @@ if (!defined('xDEC')) exit; ?>
         margin: 0;
         padding: 0;
         font-size: 14px;
+        line-height: 160%;
+        color: #3F1014;
+    }
+    h1{
+        color: #203669;
+    }
+    a, a:active, a:hover, a:visited{
+        display: inline-block;
+        text-decoration: none;
+        color: inherit;
+    }
+    a, a:active{
+        border-bottom: 1px dotted;
+    }
+    a:hover{
+        border-bottom: 1px solid;
     }
     body{
         background: url(./content/images/texture2.png);
