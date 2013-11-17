@@ -23,7 +23,8 @@
  */
 function urlBinding($segments){
     $binds = array(
-        '/^\/(index|index\.php|index\.html|index\.htm)?$/' => array('page', 'landing')
+        '/^\/(index|index\.php|index\.html|index\.htm)?\/?$/' => array('page', 'landing'),
+        '/^\/(structure|structure\.php|structure\.html|structure\.htm)?\/?$/' => array('page', 'structure')
     );
     foreach($binds as $key => $val){
         if(preg_match($key, $segments, $matches)){

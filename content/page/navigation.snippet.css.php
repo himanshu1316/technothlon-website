@@ -23,15 +23,39 @@
  */ if(!defined('xDEC')) exit; ?>
 <style type="text/css">
     .nav{
-
+    }
+    .nav a{
+        border: none;
+        display: inline-block;
+        margin: 0 16px;
+        font-variant: small-caps;
+        font-size: 2rem;
+        line-height: 2.5rem;
+        font-weight: 100;
+    }
+    .nav a:hover{
+        color: #999;
+        -webkit-transition: all 500ms ease-in;
+        -moz-transition: all 500ms ease-in;
+        -ms-transition: all 500ms ease-in;
+        -o-transition: all 500ms ease-in;
+        transition: all 500ms ease-in;
+    }
+    .nav a{
+        color: #fff;
+        -webkit-transition: all 500ms ease-in;
+        -moz-transition: all 500ms ease-in;
+        -ms-transition: all 500ms ease-in;
+        -o-transition: all 500ms ease-in;
+        transition: all 500ms ease-in;
     }
     .node{
-        display: inline-block;
         margin: 0 8px;
         font-size: 16px;
         font-family: helvetica, sans-serif;
-        color: #fff;
         height: 100%;
+        display: table-cell;
+        vertical-align: middle;
     }
     .node *{
         max-height: 100%;
@@ -39,11 +63,18 @@
     #main-navigation{
         overflow: hidden;
         position: fixed;
+        display: block;
         top: 0;
         width: 100%;
         z-index: 1000;
         text-align: center;
         background: #003442;
+    }
+    .nav-wrapper{
+        max-width: 700px;
+        height: 100%;
+        margin: 0 auto;
+        display: table;
     }
     div#main-navigation.large{
         height: 128px;

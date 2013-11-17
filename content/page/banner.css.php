@@ -37,4 +37,7 @@ if (!defined('xDEC')) exit; ?>
     .back-white{
         background: #fff;
     }
+    .banner *:first-child{
+        margin-top: 128px;
+    }
 </style>

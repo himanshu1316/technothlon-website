@@ -49,4 +49,3 @@ if(!defined('xDEC')) exit;
         $('.extra-large').fitText(1.2, { minFontSize: '36px', maxFontSize: '172px' });
     }
 </script>
-<script src="./content/js/plugins.jquery.js"></script>

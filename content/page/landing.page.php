@@ -43,7 +43,7 @@ class landing extends Pages
     function __body__($var)
     {
         parent::__body__($var);
-        if (file_exists(dir(__FILE__)) . '/landing.inc.php') require_once('landing.inc.php');
+        require_once('landing.inc.php');
     }
 
     function end_body()

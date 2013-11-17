@@ -14,7 +14,14 @@ abstract class Pages implements Page
         echo DIR.'/';
     else echo '/';
     ?>" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta name="robots" content="index, follow">
+    <meta name="distribution" content="web">
     <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>-->
+    <!--[if lt IE 9]>
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <![endif]-->
     <script src="./content/js/jquery.js"></script>
     <script>
         if (!window.jQuery) {
@@ -23,6 +30,7 @@ abstract class Pages implements Page
             document.getElementsByTagName('head')[0].appendChild(s);
         }
     </script>
+    <script src="./content/js/plugins.jquery.js"></script>
     <?php
     }
 
