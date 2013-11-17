@@ -17,9 +17,9 @@ class Logger {
      * @param $log
      */
     public function custom_log($file, $log){
-           $fp = fopen($file,'a');
-           fwrite($fp,$log."\n");
-           fclose($fp);
+           $fp = @fopen($file,'a');
+           @fwrite($fp,$log."\n");
+           @fclose($fp);
     }
 
     /**
