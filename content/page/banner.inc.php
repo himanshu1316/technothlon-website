@@ -20,4 +20,10 @@
  * THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF
  * CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER 
  * DEALINGS IN THE SOFTWARE.
- */ 
+ */
+if (!defined('xDEC')) exit; ?>
+<div id="banner-container" class="animation-container container banner back-white parallax-2" style="background-image: url(./content/images/sachin.jpg)">
+</div>
+<script>
+    $(document).ready(function(){$('#banner-container').css('height', (screen.availHeight)+'px').parallax({ coeff: 0.7});})
+</script>

@@ -27,9 +27,28 @@
     }
     .node{
         display: inline-block;
-        margin: 8px;
+        margin: 0 8px;
+        font-size: 16px;
+        font-family: helvetica, sans-serif;
+        color: #fff;
+        height: 100%;
+    }
+    .node *{
+        max-height: 100%;
     }
     #main-navigation{
+        overflow: hidden;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
         text-align: center;
+        background: #003442;
+    }
+    div#main-navigation.large{
+        height: 128px;
+    }
+    div#main-navigation.small{
+        height: 32px;
     }
 </style>

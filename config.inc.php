@@ -46,7 +46,7 @@ define('MODAL', BASE . 'modal/');
  * @since version 1.0
  *
  */
-define('DIR', '');
+define('DIR', '/technothlon.techniche.org');
 /**
  * Path to cache directory of `the application` with respect to the hosted root directory
  * @name CACHE

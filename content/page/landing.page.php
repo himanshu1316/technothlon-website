@@ -27,8 +27,11 @@ class landing extends Pages
     function __head__($var)
     {
         parent::__head__($var);
+        require_once('text.snippet.css.php');
         require_once('landing.css.php');
+        require_once('banner.css.php');
         require_once('navigation.snippet.css.php');
+        require_once('animation.snippet.css.php');
         require_once('landing.js.php');
     }
 

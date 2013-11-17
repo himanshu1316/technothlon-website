@@ -5,19 +5,41 @@
  * Time: 2:20 AM
  * Product: PhpStorm
  * Copyright (C) 2013 Rahul Kadyan
- *  
+ *
  * Permission is hereby granted, free of charge, to any person obtaining a copy of this software
- * and associated documentation files (the "Software"), to deal in the Software without restriction, 
- * including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, 
- * and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, 
+ * and associated documentation files (the "Software"), to deal in the Software without restriction,
+ * including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense,
+ * and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so,
  * subject to the following conditions:
- * 
+ *
  * The above copyright notice and this permission notice shall be included in all copies or substantial
  * portions of the Software.
- * 
+ *
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED
  * TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL
  * THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF
- * CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER 
+ * CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
  * DEALINGS IN THE SOFTWARE.
- */ 
+ */
+if (!defined('xDEC')) exit;
+// Dependencies -
+?>
+<div id="content-area" class="animation-container container thin-shadow-up no-overflow">
+    <div class="article">
+        <h1 class="extra-large thin">What is Technothlon?</h1>
+        <div class="section two-col t-justify">
+
+            Technothlon is an international school championship organized by the students of Indian Institute of Technology Guwahati. Technothlon
+            began its journey in 2004 with an aim to <i>‘Inspire Young Minds’</i>. Starting on its journey with a participation
+            of
+            200 students confined to the city of Guwahati, over the past 10 years Technothlon has expanded its reach to
+            over
+            150 cities all over the nation and various centers abroad.
+            
+            Through a series of events involving mental aptitude, logic, and dexterity, it seeks to provide school
+            students a platform to build fundamental experience and knowledge, to exercise co-ordination skills, and to
+            think out of the box. As its preliminary round is conducted through several centers in India, it is a
+            competitive test of critical thinking. Its final round is conducted in IIT Guwahati during Techniche.
+        </div>
+    </div>
+</div>

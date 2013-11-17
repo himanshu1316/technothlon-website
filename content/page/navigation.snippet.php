@@ -22,11 +22,31 @@
  * DEALINGS IN THE SOFTWARE.
  */
 if(!defined('xDEC')) exit; ?>
-<div id="main-navigation">
-    <div id="nav-home" class="nav node">Home</div>
+<div id="main-navigation" class="animation-container large">
+    <div id="nav-home" class="nav node" style="float: left"><img src="./content/images/technothlon.png"></div>
     <div id="nav-home" class="nav node">Home</div>
     <div id="nav-home" class="nav node">Home</div>
     <div id="nav-home" class="nav node">Home</div>
     <div id="nav-home" class="nav node">Home</div>
     <div id="nav-home" class="nav node">Home</div>
 </div>
+<script>
+    $(document).ready(function(){
+        var dist = screen.availHeight-32;
+        $(window).resize(function(e){dist = screen.availHeight - 128;});
+        document.addEventListener("touchmove", ScrollNav, false);
+        document.addEventListener("scroll", ScrollNav, false);
+        function ScrollNav(){
+            var st = $(window).scrollTop(),
+                $nav = $('#main-navigation');
+            var ds = dist-st;
+            if (ds >= 0 && ds <= 96){
+                $nav.css('height', (ds+32)+'px');
+            } else if (ds < 0) {
+                $nav.css('height', '32px');
+            } else {
+                $nav.css('height', '128px');
+            }
+        }
+    });
+</script>

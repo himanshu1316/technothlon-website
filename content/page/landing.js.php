@@ -23,7 +23,6 @@
  */
 if(!defined('xDEC')) exit;
 ?>
-<script src="/content/js/jquery.js"></script>
 <script>
     $(document).ready(function (){
         var $logo_head = $('#logo-head').addClass('logo-head');
@@ -43,6 +42,11 @@ if(!defined('xDEC')) exit;
         }, 4000);
     });
     function pageLoad(){
-        $('#view-port').hide().html($('#pageContent').html()).fadeIn();
+        var $pc = $('#pageContent');
+        var content = $pc.html();
+        $pc.remove();
+        $('#view-port').html(content).find('.animation-container').addClass('slide-up');
+        $('.extra-large').fitText(1.2, { minFontSize: '36px', maxFontSize: '172px' });
     }
 </script>
+<script src="./content/js/plugins.jquery.js"></script>

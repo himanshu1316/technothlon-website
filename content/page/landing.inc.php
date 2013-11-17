@@ -22,7 +22,7 @@
  * DEALINGS IN THE SOFTWARE.
  */
 if(!defined('xDEC')) exit; ?>
-<div id="view-port" class="container page">
+<div id="view-port" class="container page match-parent">
     <div id="landing" class="container">
         <div id="logo-animation-container" class="entity-group">
             <div id="logo-head" class="entity sprite-logos logo_partial_head"></div>
@@ -32,5 +32,9 @@ if(!defined('xDEC')) exit; ?>
     </div>
 </div>
 <div id="pageContent" class="hidden">
- <?php require_once('navigation.snippet.php'); ?>
+ <?php
+        require_once('navigation.snippet.php');
+        require_once('banner.inc.php');
+        require_once('information.inc.php');
+ ?>
 </div>

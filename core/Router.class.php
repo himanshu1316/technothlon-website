@@ -13,8 +13,10 @@ class Router
     {
         $requestUri = $_SERVER['REQUEST_URI'];
         $requestUri = explode('?', $requestUri);
-        $requestStr = substr($requestUri[0], strlen(DIR));
-        $segments = explode('/', trim(substr($requestUri[0], strlen(DIR)), '/'));
+        $requestStr = $requestUri[0];
+        if(strcmp(substr($requestStr,0,strlen(DIR)), DIR) == 0)
+            $requestStr = substr($requestUri[0], strlen(DIR));
+        $segments = explode('/', trim($requestStr, '/'));
         if (0 == count($segments)) {
             array_push($segments, 'home');
             array_push($segments, 'index');

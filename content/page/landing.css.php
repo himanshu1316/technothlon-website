@@ -23,18 +23,8 @@
  */
 if(!defined('xDEC')) exit;
 ?>
-<link rel="stylesheet" type="text/css" href="/content/css/sprite/landing.css"/>
+<link rel="stylesheet" type="text/css" href="./content/css/sprite/landing.css"/>
 <style type="text/css">
-    html, body{
-        width: 100%;
-        min-height: 100%;
-    }
-    body{
-        background: url(/content/images/texture2.png);
-    }
-    img{
-        max-width: 100%;
-    }
     .hidden{
         display: none;
     }
