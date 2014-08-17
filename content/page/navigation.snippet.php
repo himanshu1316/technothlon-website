@@ -26,9 +26,9 @@ if (!defined('xDEC')) exit; ?>
     <div class="nav-wrapper">
         <div id="nav-home" class="nav node"><a href="./">technothlon</a></div>
         <div id="nav-home" class="nav node"><a href="./structure">structure</a></div>
-        <div id="nav-home" class="nav node"><a href="#">nav</a></div>
-        <div id="nav-home" class="nav node"><a href="#">nav</a></div>
-        <div id="nav-home" class="nav node"><a href="#">nav</a></div>
+        <div id="nav-home" class="nav node"><a href="./about">about</a></div>
+        <div id="nav-home" class="nav node"><a href="#">technopedia</a></div>
+        <div id="nav-home" class="nav node"><a href="#">feedback</a></div>
     </div>
 </div>
 <script>
